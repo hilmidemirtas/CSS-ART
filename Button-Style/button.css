@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background:#0e1538;
+	background-color: #53C9B8
+	
+}
+
+a
+{
+	position: relative;
+	padding:20px 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background: rgba(0,0,0,0.5);
+	margin: 40px;
+	transition: 0.4s;
+	text-decoration: none;
+}
+
+a:hover {
+	background: var(--clr);
+	box-shadow: 0 0 10px var(--clr),
+		        0 0 30px var(--clr),
+				0 0 60px var(--clr),
+				0 0 100px var(--clr);
+}
+
+a::before {
+	content: '';
+	position: absolute;
+	width:40px;
+	height: 400%;
+	background: var(--clr);
+	transition: 0.4s;
+	animation: animate 2s linear infinite;
+	animation-delay: calc(0.33s * var(--i));
+}
+
+a:hover::before 
+
+{
+	width:120%;
+}
+
+@keyframes animate
+
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+
+a::after {
+	content:'';
+	position: absolute;
+	inset: 4px;
+	background: #0e1538;
+	transition: 0.5s;
+	
+	
+}
+
+a:hover::after
+
+{
+	background: var(--clr);
+}
+
+a span 
+{
+	position: relative;
+	z-index:1;
+	font-size: 2em;
+	color:#fff;
+	opacity:0.5;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	transition: 0.5s;
+}
+
+a:hover span
+
+{
+	opacity:1;
+}
+
+#grad1 {
+  height: 200px;
+  width: 200px;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green);
+}
