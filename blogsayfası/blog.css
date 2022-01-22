@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #215850;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ortalama {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100px;
+	margin-top: 40px;
+}
+
+.kart1 {
+	position: relative;
+    border-radius: 19px;
+    background-color: #D3E4E2;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.40);
+	margin: 25px;
+	padding: 5px;
+	width: 250px;
+	height: 400px;
+	text-align: center;
+	overflow: hidden;
+}
+
+img {
+	position: relative;
+	border-radius: 25%;
+	object-fit: cover;
+	margin: 5px;
+	
+	
+}
+
+.isim {
+	padding: 5px;
+	background-color: #A7BBB8;
+	border-radius: 8px;
+	
+}
+
+
+.tepealtkartlar {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.altkartlar {
+	
+    float:left;
+	border-radius: 19px;
+    background-color: #D3E4E2;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.40);
+	margin: 25px;
+	padding: 5px;
+	align-items: center;
+	width: 250px;
+	height: 400px;
+	text-align: center;
+	overflow: hidden;
+	
+}
+
+.altkartlar:hover {
+	transition: 0.3;
+	box-shadow: 0 4px 8px 0 yellow;
+}
+
+.isim:hover {
+	background-color: #A7C8C3;
+	cursor: pointer;
+	text-decoration: underline;
+	
+}
