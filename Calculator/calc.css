@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(88, 197, 183);
+}
+
+.container 
+{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: rgb(141, 37, 37);
+    padding: 40px 30px 30px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset -5px -px 15px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+.calculator {
+    position: relative;
+    display: grid;
+}
+
+.calculator .value 
+{
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: green;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.calculator span {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, red, blue);
+    box-shadow: inset 0 -8px 8px rgba(0,0,0,0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.4);
+    color: yellowgreen;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.calculator span::before 
+{
+    counter-reset: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, yellow, green,);
+    border-radius: 10px;
+    box-shadow: -5 -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid red;
+    border-bottom: 1px solid blueviolet;
+    border-top: 1px solid goldenrod;
+}
+.calculator span:active
+{
+    filter: brightness(1.5);
+}
+
+.calculator span i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator .clear 
+{
+    grid-column: span 2;
+    width: 100%;
+}
+
+span {
+    color: whitesmoke;
+}
